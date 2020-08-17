@@ -50,6 +50,13 @@ collections:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Home Page'
+        name: 'home'
+        file: 'index.html'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'home' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'home' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: "config"
     label: "Config"
     editor:
