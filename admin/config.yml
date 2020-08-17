@@ -52,7 +52,7 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Home Page'
         name: 'home'
-        file: 'index.html'
+        file: 'index.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'home' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'home' }
