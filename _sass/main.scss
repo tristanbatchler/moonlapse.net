@@ -40,7 +40,7 @@
   }
   
   @mixin padding {
-    padding: 1rem;
+    padding: 0.7rem;
   }
   
   // syntaxhHighlighting - Pygments Monokai - https://raw.githubusercontent.com/jwarby/jekyll-pygments-themes/master/monokai.css
@@ -59,9 +59,11 @@
   .highlighter-rouge {
     background-color: var(--foreground-color);
     margin: 0 0 2rem 0;
-  
+    
     pre.highlight {
       @include padding;
+      overflow-x: hidden;
+      overflow-y: hidden;
     }
     
     .highlight {
@@ -142,6 +144,9 @@
     @include serif;
     font-size: 13px;
     line-height: 1.25rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
   }
   
@@ -161,7 +166,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color:var(--background-color);
+    background-color: var(--background-color);
       z-index: 99;
   }
   
