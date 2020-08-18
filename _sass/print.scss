@@ -1,0 +1,31 @@
+// This is a partial.
+// It lies in /_sass, just waiting to be imported.
+// It does not contain the YAML front matter and has no corresponding output file in the built site.
+
+body {
+	background: none;
+	color: black;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0; padding: 0;
+	background: none;
+}
+
+header, footer {
+    display: none;
+}
+
+.content a:after {
+	content: " [" attr(href) "] ";
+}
+
+.featured {
+    overflow: hidden;
+}
+
+img, .pixelate {
+    height: auto;
+    width: 100%;
+}

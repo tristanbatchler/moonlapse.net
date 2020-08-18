@@ -17,3 +17,6 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+sass:
+    style: compressed
