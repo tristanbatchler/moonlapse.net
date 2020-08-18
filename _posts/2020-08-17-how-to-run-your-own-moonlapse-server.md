@@ -90,7 +90,6 @@ To follow along with this tutorial, you will need a machine running an operating
    "database": "Moonlapse"
    }
    ```
-
 10. ```shell
     python3 MoonlapseMUD/server
     ```
