@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: default
+layout: home
 ---
 # ![MoonlapseMUD Logo](https://i.imgur.com/Ie6YZ4v.png)
 
