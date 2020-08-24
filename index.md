@@ -20,19 +20,21 @@ Unzip the archive either using a GUI archiving tool (typically integrated with y
 unzip Client.zip
 ```
 
+> *The `unzip` command should work fine on Windows, but if you are running Linux, please install the `unzip` package with your distribution's package manager (e.g. `sudo apt-get install unzip` for Debian-based systems).*
+
 Now simply run the client package using python 3:
 
 ```shell
 python3 moonlapse
 ```
 
-or alternatively if your OS uses python3 by default:
+> *or alternatively if your OS uses python3 by default:*
+>
+> ```shell
+> python moonlapse
+> ```
 
-```shell
-python moonlapse
-```
-
-## Note for Windows users:
+## Note for Windows users
 
 Windows does not ship with curses, which is necessary for the client code to run. To install curses for Python, install the windows-curses library by opening a terminal and entering:
 
@@ -40,8 +42,24 @@ Windows does not ship with curses, which is necessary for the client code to run
 pip install windows-curses
 ```
 
-If that doesn't work because you do not have pip installed, follow these steps to install pip first and try again:
+> *If that doesn't work because you do not have pip installed, follow these steps to install pip first and try again:*
+>
+> 1. *Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py) to a folder on your computer*
+> 2. *Open a terminal and navigate to the folder containing get-pip.py*
+> 3. *Run the following command: `python get-pip.py`*
 
-1. Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py) to a folder on your computer
-2. Open a terminal and navigate to the folder containing get-pip.py
-3. Run the following command: `python get-pip.py`
+## For the sake of the heavens
+
+Please do not use any real usernames or passwords when registering for an account. Make sure your credentials are specific to MoonlapseMUD.
+
+Until we implement better security (roadmap for version 1.3), all passwords are:
+
+* sent over the internet unencrypted,
+* stored in our database as as plaintext (not hashed),
+* even displayed in plaintext in the client window.
+
+When this changes, expect to see a note in the [dev logs](https://moonlapse.net/blog) and this section will be removed from the front page.
+
+---
+
+Thanks for checking out the game, cheers!
