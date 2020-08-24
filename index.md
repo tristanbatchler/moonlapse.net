@@ -2,10 +2,6 @@
 title: Home
 layout: home
 ---
-# ![MoonlapseMUD Logo](https://i.imgur.com/Ie6YZ4v.png)
-
-![Deploy MoonlapseMUD on production server](https://github.com/trithagoras/MoonlapseMUD/workflows/Deploy%20MoonlapseMUD%20on%20production%20server/badge.svg)
-
 Welcome to Moonlapse MUD: an open-source, multi-user dungeon designed to play directly in any terminal.
 
 # How to play
@@ -49,5 +45,3 @@ If that doesn't work because you do not have pip installed, follow these steps t
 1. Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py) to a folder on your computer
 2. Open a terminal and navigate to the folder containing get-pip.py
 3. Run the following command: `python get-pip.py`
-
-For more information, visit https://moonlapse.net
