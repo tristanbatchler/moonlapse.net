@@ -2,8 +2,6 @@
 title: Home
 layout: home
 ---
-![MoonlapseMUD header image](/assets/uploads/header.png "MoonlapseMUD header image")
-
 Welcome to Moonlapse MUD: an open-source, multi-user dungeon designed to play directly in any terminal.
 
 # How to play
