@@ -8,6 +8,7 @@
 
 :root {
     --background-color: rgb(39, 40, 34);
+    --code-color: rgba(0, 0, 0, 0.2);
     --foreground-color: rgb(117, 113, 94);
     --foreground-color-transparent: rgba(248, 248, 242, 0.50);
     --text-color: rgb(248, 248, 242);
@@ -60,10 +61,11 @@
   
   code.highlighter-rouge {
     padding: 0.05rem 0.1rem 0.05rem 0.1rem;
+    background-color: var(--code-color);
   }
   
   .highlighter-rouge {
-    background-color: var(--foreground-color);
+    background-color: var(--code-color);
     margin: 0 0 2rem 0;
     
     pre.highlight {
@@ -97,7 +99,7 @@
       .m { color: #ae81ff } // Literal.Number
       .s { color: #e6db74 } // Literal.String
       .na { color: #a6e22e } // Name.Attribute
-      .nb { color: #f8f8f2 } // Name.Builtin
+      .nb { color: #f92672 } // Name.Builtin
       .nc { color: #a6e22e } // Name.Class
       .no { color: #66d9ef } // Name.Constant
       .nd { color: #a6e22e } // Name.Decorator
@@ -120,7 +122,7 @@
       .sc { color: #e6db74 } // Literal.String.Char
       .sd { color: #e6db74 } // Literal.String.Doc
       .s2 { color: #e6db74 } // Literal.String.Double
-      .se { color: #ae81ff } // Literal.String.Escape
+      .se { color: #f8f8f2 } // Literal.String.Escape
       .sh { color: #e6db74 } // Literal.String.Heredoc
       .si { color: #e6db74 } // Literal.String.Interpol
       .sx { color: #e6db74 } // Literal.String.Other
