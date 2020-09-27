@@ -29,7 +29,7 @@ To follow along with this tutorial, you will need a machine running an operating
 5. Next, the drivers required to let Python and PostgreSQL talk to each other.
 
    ```shell
-   sudo apt install python-psycopg2
+   sudo apt install python3-psycopg2
    sudo apt install libpq-dev
    sudo pip3 install psycopg2
    ```
@@ -84,17 +84,18 @@ To follow along with this tutorial, you will need a machine running an operating
    \i Moonlapse.sql
    ```
 10. Create the database connection string and place it in the `MoonlapseMUD/server` directory.\
-   `MoonlapseMUD/server/connectionstrings.json`
+    `MoonlapseMUD/server/connectionstrings.json`
 
-   ```json
-   {
-   "user": "MoonlapseAdmin",
-   "password": "myPassword",
-   "host": "localhost",
-   "port": "5432",
-   "database": "Moonlapse"
-   }
-   ```
+```json
+{
+"user": "MoonlapseAdmin",
+"password": "myPassword",
+"host": "localhost",
+"port": "5432",
+"database": "Moonlapse"
+}
+```
+
 11. ```shell
     python3 MoonlapseMUD/server
     ```
