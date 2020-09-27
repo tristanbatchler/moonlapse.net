@@ -56,7 +56,7 @@ To follow along with this tutorial, you will need a machine running an operating
 
    ```shell
    sudo -u postgres psql postgres
-   \password posrgres
+   \password postgres
    ```
 
    You'll see:
