@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to run your own Moonlapse server
+title: How to run your own Moonlapse server [Debian/Ubuntu]
 date: 2020-08-17T22:07:57.096Z
 author: saltytaro
 ---
