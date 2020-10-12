@@ -30,6 +30,7 @@ To follow along with this tutorial, you will need a machine running an operating
 
    ```shell
    sudo pacman -S python-psycopg2
+   sudo pip install psycopg2
    ```
 6. Install `git` and clone the MoonlapseMUD source from the current repository
 
