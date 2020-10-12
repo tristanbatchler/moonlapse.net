@@ -21,7 +21,7 @@ To follow along with this tutorial, you will need a machine running an operating
    ```shell
    sudo pacman -S python-pip
    ```
-4. Install the PostgreSQL, the database server the game will need to read from and write to.
+4. Install PostgreSQL the database server the game will need to read from and write to.
 
    ```shell
    sudo pacman -S postgresql
@@ -36,12 +36,25 @@ To follow along with this tutorial, you will need a machine running an operating
    ```shell
    sudo pacman -S git
    git clone https://github.com/trithagoras/MoonlapseMUD
+   sudo cp MoonlapseMUD/Moonlapse.sql /var/lib/postgres
    ```
-7. Set a password for the operating system user `postgres`, which is created when you install postgresql by default. This will be used to create your database.\
+7. Initialise the database cluster.
+    ```shell
+    sudo -iu postgres
+    initdb -D /var/lib/postgres/data
+    exit
+    ```
+8. Enable and start the PostgreSQL service.
+   ```shell
+   sudo systemctl enable postgresql
+   sudo systemctl start postgresql
+   ```
+9. Set a password for the operating system user `postgres`, which is created when you install postgresql by default. This will be used to create your database.\
 
    ```shell
    sudo -u postgres psql postgres
    \password postgres
+   \q
    ```
 
    You'll see:
@@ -50,10 +63,10 @@ To follow along with this tutorial, you will need a machine running an operating
    Enter new password:
    Enter it again:
    ```
-8. From your terminal, create a new user to run the Moonlapse database and create the new database itself.\
+10. From your terminal, create a new user to run the Moonlapse database and create the new database itself.\
 
    ```shell
-   su - postgres
+   sudo -iu postgres
    createuser --interactive --pwprompt
    Enter name of role to add: MoonlapseAdmin
    Enter password for new role:
@@ -61,14 +74,15 @@ To follow along with this tutorial, you will need a machine running an operating
    Shall the new role be a superuser? (y/n) y
    createdb Moonlapse
    ```
-9. When you're running `psql` as the `postgres` user, create the database required for the game. Then run the script you downloaded earlier to create the structure for the game database.
+11. When you're running `psql` as the `postgres` user, create the database required for the game. Then run the script you moved earlier to create the structure for the game database.
 
    ```shell
-   wget https://raw.githubusercontent.com/trithagoras/MoonlapseMUD/master/Moonlapse.sql
    psql Moonlapse
    \i Moonlapse.sql
+   \q
+   exit
    ```
-10. Create the database connection string and place it in the `MoonlapseMUD/server` directory.\
+12. Create the database connection string and place it in the `MoonlapseMUD/server` directory.\
     `MoonlapseMUD/server/connectionstrings.json`
 
 ```json
@@ -81,6 +95,6 @@ To follow along with this tutorial, you will need a machine running an operating
 }
 ```
 
-11. ```shell
+13. ```shell
     python MoonlapseMUD/server
     ```
