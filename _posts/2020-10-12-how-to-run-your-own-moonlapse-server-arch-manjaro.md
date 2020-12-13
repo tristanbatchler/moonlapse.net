@@ -40,12 +40,14 @@ To follow along with this tutorial, you will need a machine running an operating
    sudo cp MoonlapseMUD/Moonlapse.sql /var/lib/postgres
    ```
 7. Initialise the database cluster.
-    ```shell
-    sudo -iu postgres
-    initdb -D /var/lib/postgres/data
-    exit
-    ```
+
+   ```shell
+   sudo -iu postgres
+   initdb -D /var/lib/postgres/data
+   exit
+   ```
 8. Enable and start the PostgreSQL service.
+
    ```shell
    sudo systemctl enable postgresql
    sudo systemctl start postgresql
@@ -66,24 +68,29 @@ To follow along with this tutorial, you will need a machine running an operating
    ```
 10. From your terminal, create a new user to run the Moonlapse database and create the new database itself.\
 
-   ```shell
-   sudo -iu postgres
-   createuser --interactive --pwprompt
-   Enter name of role to add: MoonlapseAdmin
-   Enter password for new role:
-   Enter it again:
-   Shall the new role be a superuser? (y/n) y
-   createdb Moonlapse
-   ```
-11. When you're running `psql` as the `postgres` user, create the database required for the game. Then run the script you moved earlier to create the structure for the game database.
+```shell
+sudo -iu postgres
+createuser --interactive --pwprompt
+Enter name of role to add: MoonlapseAdmin
+Enter password for new role:
+Enter it again:
+Shall the new role be a superuser? (y/n) y
+createdb Moonlapse
+```
 
-   ```shell
-   psql Moonlapse
-   \i Moonlapse.sql
-   \q
-   exit
-   ```
-12. Create the database connection string and place it in the `MoonlapseMUD/server` directory.\
+11. Install Twisted, the networking library for the server.\
+
+```shell
+sudo pip install twisted
+```
+
+12. Install Django, the library used for the ORM.\
+
+```shell
+sudo pip install django
+```
+
+13. Create the database connection string and place it in the `MoonlapseMUD/server` directory.\
     `MoonlapseMUD/server/connectionstrings.json`
 
 ```json
@@ -96,6 +103,14 @@ To follow along with this tutorial, you will need a machine running an operating
 }
 ```
 
-13. ```shell
-    python MoonlapseMUD/server
-    ```
+14. Initialise the database.\
+
+```shell
+python MoonlapseMUD/server/manage.py migrate
+```
+
+14. Run the server!\
+
+```shell
+python MoonlapseMUD/server
+```
