@@ -246,8 +246,10 @@
   }
   
   img, canvas, svg {
-    width: 100%;
-    height: auto;
+    &:not([width]) {
+      width: 100%;
+      height: auto;
+    }
   }
   
   table {
