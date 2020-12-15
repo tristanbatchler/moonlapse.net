@@ -11,7 +11,7 @@ Ensure Python 3.4 is installed on your machine and your terminal has a resolutio
 Simply download the latest client either using the download links above or by running the following command in your terminal:
 
 ```shell
-wget -O Client.zip https://github.com/trithagoras/MoonlapseMUD/releases/download/v0.2/Client.zip
+wget -O Client.zip https://github.com/trithagoras/MoonlapseMUD/releases/download/v0.3/Client.zip
 ```
 
 Unzip the archive either using a GUI archiving tool (typically integrated with your file manager) or by running:
@@ -22,7 +22,7 @@ unzip Client.zip
 
 > *The `unzip` command should work fine on Windows, but if you are running Linux, please install the `unzip` package with your distribution's package manager (e.g. `sudo apt-get install unzip` for Debian-based systems).*
 
-Now simply run the client package using python 3:
+Now simply run the client package using Python 3:
 
 ```shell
 python3 moonlapse
@@ -52,7 +52,7 @@ pip install windows-curses
 
 Please do not use any real usernames or passwords when registering for an account. Make sure your credentials are specific to MoonlapseMUD.
 
-Until we implement better security (roadmap for version 1.3), all passwords are:
+Until we implement better security (roadmap for version 0.4), all passwords are:
 
 * sent over the internet unencrypted,
 * stored in our database as as plaintext (not hashed),
