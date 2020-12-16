@@ -25,13 +25,13 @@ unzip Client.zip
 Now simply run the client package using Python 3:
 
 ```shell
-python3 moonlapse
+python3 MoonlapseMUD/client
 ```
 
 > *or alternatively if your OS uses python3 by default:*
 >
 > ```shell
-> python moonlapse
+> python MoonlapseMUD/client
 > ```
 
 ## Note for Windows users
