@@ -285,3 +285,35 @@
       padding: 15px;
     }
   }
+
+  hr {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: var(--text-color);
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    text-align: center;
+
+    &:after {
+      content: "§";
+      display: inline-block;
+      position: relative;
+      top: -0.7em;
+      font-size: 1.5em;
+      padding: 0 0.25em;
+      color: var(--text-color);
+      background-color: var(--background-color);
+    }
+
+    &:before { 
+      display: block;
+      content: "";
+      height: 30px;
+      margin-top: -31px;
+      border-style: solid;
+      border-color: var(--text-color);
+      border-width: 0 0 1px 0;
+      border-radius: 20px;
+    }
+  }
