@@ -2,11 +2,11 @@
 title: Home
 layout: home
 ---
-Welcome to Moonlapse MUD: an open-source, multi-user dungeon designed to play directly in any terminal.
+Welcome to MoonlapseMUD: an open-source, multi-user dungeon designed to play directly in any terminal.
 
 # How to play
 
-Ensure Python 3.4 is installed on your machine and your terminal has a resolution at least 46x106 characters.
+Ensure Python 3.4 is installed on your machine and your terminal has a resolution at least 41x106 characters.
 
 Simply download the latest client either using the download links above or by running the following command in your terminal:
 
