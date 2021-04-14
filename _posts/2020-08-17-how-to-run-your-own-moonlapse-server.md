@@ -120,6 +120,7 @@ To follow along with this tutorial, you will need a machine running an operating
     ```shell
     python MoonlapseMUD/server/manage.py makemigrations server
     python MoonlapseMUD/server/manage.py migrate
+    python MoonlapseMUD/server/manage.py loaddata MoonlapseMUD/server/data.json
     ```
 16. Run the server!
 
