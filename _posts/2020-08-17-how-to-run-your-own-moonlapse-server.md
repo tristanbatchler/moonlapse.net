@@ -118,7 +118,7 @@ To follow along with this tutorial, you will need a machine running an operating
 15. Initialise the database.
 
     ```shell
-    python MoonlapseMUD/server/manage.py makemigrations networking
+    python MoonlapseMUD/server/manage.py makemigrations server
     python MoonlapseMUD/server/manage.py migrate
     ```
 16. Run the server!
